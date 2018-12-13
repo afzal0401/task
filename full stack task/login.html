@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>login</title>
+</head>
+    <body>
+        <form>
+        <input class="ml-5 mt-5" type="email"  id="email" autocomplete="off" placeholder="Email" size="30" required><br>
+            <p class="ml-5" id="demo"></p>
+        <div class="space"></div>
+        <input class="ml-5" type="password" id="password" placeholder="Password" autocomplete="off" size="30" required><br>
+            <p class="ml-5" id="demo2"></p>
+        <div class="space"></div>
+        <button class="btn btn-success btn-sm ml-5" onclick="validate()"><a class="text-light" href="#">login</a></button>
+        <button class="btn btn-success btn-sm"><a class="text-light" href="registration.html">Registration</a></button>
+        </form>  
+    </body>
+
+<script src="js/fontawesome-all.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mdb.min.js"></script>
+    <script>
+        function validate(){
+            var mail="user@gmail.com"
+            var pass="123456"
+            var a=document.getElementById("email").value;
+            var b=document.getElementById("password").value;
+            if(a==""){
+                document.getElementById("demo").innerHTML="email should not be empty"
+                return false;
+            }
+            if(b==""){
+                document.getElementById("demo2").innerHTML="password should not be empty"
+                return false;
+            }
+            if(a!=mail){
+                document.getElementById("demo").innerHTML="please enter correct email"
+                return false;
+            }
+            if(b!=pass){
+                document.getElementById("demo2").innerHTML="please enter correct password"
+                return false;
+            }
+            
+            if(a==mail && b==pass) {            document.getElementById("demo").innerHTML="success"
+              return true;
+            }
+            
+        }
+    </script>
+</html>
